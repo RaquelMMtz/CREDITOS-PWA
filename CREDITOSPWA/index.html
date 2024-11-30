@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Inicio de Sesión - Aplicación de Crédito</title>
+    <script src="js/app.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #003366, #0066cc);
+        }
+
+        .login-panel {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .title {
+            color: #003366;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            background: #f9f9f9;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .input-text {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            background: transparent;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background-color: #004c99;
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-panel">
+        <h1 class="title">CREDITOS</h1>
+        <img src="assets/Logo.png" alt="Logo Créditos" class="logo">
+        
+        <div class="input-group">
+            <img src="assets/usuario.png" alt="Usuario Icono" class="icon">
+            <input type="text" id="username" placeholder="Usuario" class="input-text">
+        </div>
+
+        <div class="input-group">
+            <img src="assets/Contraseña.png" alt="Contraseña Icono" class="icon">
+            <input type="password" id="password" placeholder="Contraseña" class="input-text">
+        </div>
+
+        <button id="loginButton" class="btn">Iniciar Sesión</button>
+        <a href="#" id="registerLink" class="register-link">¿No tienes una cuenta? Regístrate aquí</a>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'main_menu.html';
+        });
+
+        document.getElementById('registerLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'register.html';
+        });
+    </script>
+</body>
+</html>
